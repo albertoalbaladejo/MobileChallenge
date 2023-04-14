@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true">
+
+    <include
+        android:id="@+id/loader_layout"
+        layout="@layout/layout_loader"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+        android:id="@+id/carouselImage"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/product_carousel_image_width"
+        android:layout_marginTop="@dimen/margin_general"
+        android:translationZ="8dp"
+        app:autoPlay="true"
+        app:autoPlayDelay="4000"
+        app:carouselGravity="CENTER"
+        app:carouselPaddingBottom="8dp"
+        app:carouselPaddingTop="8dp"
+        app:carouselType="SHOWCASE"
+        app:imageScaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:scaleOnScroll="true"
+        app:scalingFactor=".25"
+        app:showBottomShadow="false"
+        app:showCaption="false"
+        app:showIndicator="false"
+        app:showNavigationButtons="false"
+        app:showTopShadow="false" />
+
+    <me.relex.circleindicator.CircleIndicator2
+        android:id="@+id/custom_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/home_custom_indicator_height"
+        android:layout_marginStart="@dimen/margin_general"
+        app:ci_animator="@animator/scale_with_alpha"
+        app:ci_drawable="@drawable/dot"
+        app:ci_drawable_unselected="@drawable/dot"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/carouselImage" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/products_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingHorizontal="@dimen/padding_general_8"
+        android:paddingBottom="@dimen/padding_general_8"
+        app:flow_horizontalAlign="center"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/loader_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/custom_indicator"
+        app:spanCount="2"
+        tools:itemCount="10"
+        tools:listitem="@layout/products_item" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

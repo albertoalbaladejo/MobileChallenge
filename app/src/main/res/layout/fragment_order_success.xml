@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ordersuccess.OrderSuccessFragment">
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/order_constraint_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="order_success_image,order_success_label_tv,
+        order_success_message_tv,back_to_home_btn, redirect_home_timer_tv" />
+
+    <ImageView
+        android:id="@+id/order_success_image"
+        android:layout_width="@dimen/order_success_image_width"
+        android:layout_height="@dimen/order_success_image_height"
+        android:layout_marginBottom="@dimen/order_success_image_margin_bottom"
+        android:contentDescription="@string/img_desc"
+        app:layout_constraintBottom_toTopOf="@+id/order_success_label_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_check"
+        app:tint="@color/purple_500" />
+
+    <TextView
+        android:id="@+id/order_success_label_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/success_label"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/order_success_message_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/order_success_message_tv_margin_top"
+        android:text="@string/order_success_message_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline2" />
+
+    <TextView
+        android:id="@+id/redirect_home_timer_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/redirect_home_timer_tv_margin_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back_to_home_btn"
+        tools:text="Redirigiendo al inicio en 5" />
+
+    <Button
+        android:id="@+id/back_to_home_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/back_to_home_btn_margin_horizontal"
+        android:layout_marginTop="@dimen/back_to_home_btn_margin_top"
+        android:backgroundTint="@color/purple_500"
+        android:padding="@dimen/back_to_home_btn_padding"
+        android:text="@string/back_to_home_text"
+        android:textAllCaps="false"
+        android:textSize="@dimen/text_size_16"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/order_success_message_tv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

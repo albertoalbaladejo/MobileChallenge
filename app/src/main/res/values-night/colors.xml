@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_500">#FFBB86FC</color>
+    <color name="red">#F25F5C</color>
+
+    <color name="view_bottom_sheet_modal">#6A6A6A</color>
+    <color name="bottom_sheet_background">#3A3939</color>
+    <color name="button_text_color">#EFEFEF</color>
+    <color name="black">#969696</color>
+    <color name="dark_gray_order_summary">#A3A3A3</color>
+    <color name="dark_gray_card">#BFBFBF</color>
+</resources>

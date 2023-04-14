@@ -139,6 +139,11 @@ ProductEntity, BasketShoppingEntity and OrdersEntity objects, in addition to the
 file ` ProductRepository`. There is also the interface of the local BBDD Room and its corresponding
 logic and files.
 
+### UI
+
+In UI you will find all the screens of the user interface of the application, including their
+respective ViewModels and the Adapters in the necessary cases.
+
 ## Libraries
 
 Next, I will explain the libraries that I have used to develop the project:

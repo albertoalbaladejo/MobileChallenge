@@ -180,6 +180,5 @@ I haven't used Firebase because of the size of the project and not to make it to
 worked a lot with Firebase, using all its features and the truth is that I really like it and above
 all, I feel very safe working with it.
 
-### Testing Mock: [Mockk](https://mockk.io/)
-
-I don't know why but I have a slight preference for Mockk over Mockito.
+### Testing Mockk and Mockito: [Mockk](https://mockk.io/) [Mockito](https://site.mockito.org/)
+I have used Mockk and Mockito for the programming of the test
